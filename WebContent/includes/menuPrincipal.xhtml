@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<!-- Aqui usamos o ui para contruir paginas para ser injetada em outra -->
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+	
+<!-- A prorpiedade outcome é quem redireciona as paginas. Link de navegação -->
+	<h:form>
+		<p:menubar>
+			<p:submenu label="Arquivo">
+				<p:menuitem value="Sair"></p:menuitem>
+			</p:submenu>
+			<p:submenu label="Cadastros">
+				<p:menuitem  value="Fabricante" outcome="/pages/fabricante.xhtml">
+				</p:menuitem>
+				<p:menuitem value="Produtos" outcome="/pages/produto.xhtml">
+				</p:menuitem>
+			</p:submenu>
+			<p:submenu label="Ajuda">
+				<p:menuitem value="Sobre"></p:menuitem>
+			</p:submenu>
+		</p:menubar>
+	</h:form>
+</ui:composition>

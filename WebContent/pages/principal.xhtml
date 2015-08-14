@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- Aqui será nossa pagina principal, aqui nós vamos anexar o template que já tem todos os importes que precisamos -->
+
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+ 				xmlns:ui="http://java.sun.com/jsf/facelets"
+ 				template="/templates/modeloSistema.xhtml">
+ 				
+<!-- O define ele sobrescreve o Inserte do template, eu criei o menu no template, mas nao configurei nada, 
+entao no arquivo menuprincial o menu foi criado, e om com include eu importo aquele trecho de html aqui na minha pagina principal -->
+
+<ui:define name="menu">
+	<ui:include src="/includes/menuPrincipal.xhtml"/>
+</ui:define>
+	
+<ui:define name="conteudo"></ui:define>
+
+</ui:composition>
