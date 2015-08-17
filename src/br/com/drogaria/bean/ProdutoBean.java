@@ -1,8 +1,10 @@
 package br.com.drogaria.bean;
 
+import java.io.Serializable;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 
@@ -14,12 +16,23 @@ import br.com.drogaria.util.JSFUtil;
 
 @ManagedBean(name="MBProduto")
 @ViewScoped
-public class ProdutoBean {
+public class ProdutoBean implements Serializable {
 	
+	private static final long serialVersionUID = 1L;
 	private ArrayList<Produto> items;
 	private ArrayList<Produto> itemsFiltrados;
 	private Produto produto;
 	private ArrayList<Fabricante> comboFabricante;
+	
+	
+	public ProdutoBean(){
+		System.out.println("Construtor");
+	}
+	
+	@PostConstruct
+	private void inicializacao(){
+		carregarListagem("BRuno");
+	}
 	
 	
 	public Produto getProduto() {
@@ -54,7 +67,8 @@ public class ProdutoBean {
 		this.items = items;
 	}
 	
-	public void carregarListagem(){
+	public void carregarListagem(String nome){
+		System.out.println(nome);
 		ProdutoDAO pdao = new ProdutoDAO();
 		try {
 			items = pdao.listar();
@@ -129,21 +143,3 @@ public class ProdutoBean {
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

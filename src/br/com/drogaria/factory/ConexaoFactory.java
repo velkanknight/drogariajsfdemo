@@ -7,10 +7,10 @@ import com.mysql.jdbc.Connection;
 public class ConexaoFactory {
 	
 	//usuario maiusculo porque é uma variavel constante
-	private static final String USUARIO = "adminWLaT3lT";
-	private static final String SENHA = "L4TkK5wWUS7W";
-	private static final String URL = "jdbc:mysql://127.3.118.130:3306/drogariajsfdemo";
-	//private static final String URL = "jdbc:mysql://localhost:3306/drogaria";
+	private static final String USUARIO = "root";
+	private static final String SENHA = "velkan2512";
+	//private static final String URL = "jdbc:mysql://127.3.118.130:3306/drogariajsfdemo";
+	private static final String URL = "jdbc:mysql://localhost:3306/drogaria";
 	
 	//esse throws diz que a excessão será tratada por quem chamar o metodo
 	public static Connection conectar() throws SQLException{
